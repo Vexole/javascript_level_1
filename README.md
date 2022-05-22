@@ -1,1 +1,1 @@
-# javascript_level_1
+# This repo contains all the assignments for Level 1 JavaScript.
