@@ -13,5 +13,5 @@ function convertFahrenitToCelsius(fahrenheit) {
         return;
     }
     let temperatureInCelsius = (parsedFahrenheit - 32) * (5/9);
-    return temperatureInCelsius;
+    return temperatureInCelsius.toFixed(2);
 }
