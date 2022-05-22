@@ -15,7 +15,7 @@ while (true) {
 function convertFahrenitToCelsius(fahrenheit) {
   let parsedFahrenheit = parseFloat(fahrenheit);
   if (Number.isNaN(parsedFahrenheit)) {
-    alert("Please enter correct temperature in Fahrenheit!");
+    alert("Please enter correct temperature in Fahrenheit! It should be a number");
     return;
   }
 
