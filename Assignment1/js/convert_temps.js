@@ -2,18 +2,16 @@
 
 let userInput;
 
-while (userInput != 999) {
+while (userInput !== 999) {
   userInput = parseFloat(
     prompt(
-      "Enter Fahrenheit temperature \n Or enter 999 to terminate the conversion"
+      "Enter Fahrenheit temperature \nOr enter 999 to terminate the conversion"
     )
   );
 
-  if (Number.isNaN(userInput)) {
-    alert(
-      "Please enter a valid number"
-    );
-  } else if (userInput != 999) {
+  if (isNaN(userInput)) {
+    alert("Please enter a valid number");
+  } else if (userInput !== 999) {
     let temperatureInCelsius = convertFahrenitToCelsius(userInput);
     if (temperatureInCelsius) {
       alert(
