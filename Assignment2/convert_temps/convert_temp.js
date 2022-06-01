@@ -17,7 +17,6 @@ const toCelsius = () => {
     $('degree_label_1').innerText = 'Enter F degrees:';
     $('degree_label_2').innerText = 'Degrees Celsius:';
     clearTextBoxes();
-
 }
 
 const convertTemp = () => {
