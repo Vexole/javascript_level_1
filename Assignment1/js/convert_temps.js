@@ -11,22 +11,12 @@ while (userInput !== 999) {
 
   if (isNaN(userInput)) {
     alert("Please enter a valid number");
+  } else if ((userInput < -100 || userInput > 212) && userInput !== 999) {
+    alert(`You entered ${userInput}. \nEntry must range from -100 to +212.`);
   } else if (userInput !== 999) {
-    let temperatureInCelsius = convertFahrenitToCelsius(userInput);
-    if (temperatureInCelsius) {
-      alert(
-        `Fahrenheit temperature is ${userInput} \n\n Celsius temperature is ${temperatureInCelsius}`
-      );
-    }
+    let temperatureInCelsius = (userInput - 32) * (5 / 9);
+    alert(
+      `Fahrenheit temperature is ${userInput} \n\n Celsius temperature is ${temperatureInCelsius.toFixed(2)}`
+    );
   }
-}
-
-function convertFahrenitToCelsius(fahrenheit) {
-  if (fahrenheit < -100 || fahrenheit > 212) {
-    alert(`You entered ${fahrenheit}. \n Entry must range from -100 to +212.`);
-    return;
-  }
-
-  let temperatureInCelsius = (fahrenheit - 32) * (5 / 9);
-  return temperatureInCelsius.toFixed(2);
 }
