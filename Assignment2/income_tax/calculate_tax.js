@@ -5,7 +5,7 @@ var $ = function (id) {
 
 const processEntry = () => {
     const userInput = parseFloat($('income').value);
-    if (isNaN(userInput) || userInput < 0) {
+    if (isNaN(userInput) || userInput <= 0) {
         alert('Please enter a valid number greater than 0');
     } else {
         const taxAmount = calculateTax(userInput);

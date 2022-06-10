@@ -11,12 +11,14 @@ const toFahrenheit = () => {
     $('degree_label_1').innerText = 'Enter C degrees:';
     $('degree_label_2').innerText = 'Degrees Fahrenheit:';
     clearTextBoxes();
+    $("degrees_entered").focus();
 };
 
 const toCelsius = () => {
     $('degree_label_1').innerText = 'Enter F degrees:';
     $('degree_label_2').innerText = 'Degrees Celsius:';
     clearTextBoxes();
+    $("degrees_entered").focus();
 }
 
 const convertTemp = () => {

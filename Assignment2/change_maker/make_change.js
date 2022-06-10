@@ -18,9 +18,9 @@ window.addEventListener('DOMContentLoaded', () => {
         const quarters = parseInt(userInput / 25);
         let amountRemainingToChange = userInput % 25;
         const dimes = parseInt(amountRemainingToChange / 10);
-        amountRemainingToChange = userInput % 10;
+        amountRemainingToChange = amountRemainingToChange % 10;
         const nickels = parseInt(amountRemainingToChange / 5);
-        amountRemainingToChange = userInput % 5;
+        amountRemainingToChange = amountRemainingToChange % 5;
         const pennies = amountRemainingToChange;
 
         $('quarters').value = quarters;
