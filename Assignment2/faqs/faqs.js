@@ -6,10 +6,21 @@ var toggle = function () {
     var h2 = this;                    // clicked h2 tag     
     var div = h2.nextElementSibling;  // h2 tag's sibling div tag
 
+    // get the list of h2 elements
     var h2Elements = faqs.getElementsByTagName("h2");
+    /*
+        loop through all h2 elements and remove the attribute for h2 and div which is not clicked
+        or lies inside the clicked element
+     */
     for (var i = 0; i < h2Elements.length; i++) {
+        // check if the current element in loop is not equal to the clicked element
         if (this !== h2Elements[i]) {
+            // remove the class attribute from the current element in the loop
             h2Elements[i].removeAttribute('class');
+            /*
+                get the next sibling of the current element in the loop and remove the class 
+                attribute from the current element in the loop
+            */
             h2Elements[i].nextElementSibling.removeAttribute('class');
         }
     }
