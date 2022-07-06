@@ -5,18 +5,20 @@ var displayCurrentTime = function () {
     // get the current date and time
     let currentTime = new Date();
     let hours = currentTime.getHours();
+
     // setting the hour value for midnight as 0
     hours = hours == 24 ? 0 : hours;
-    // if hours > 12, subtract 12 from it to get the value in AM/PM format
-    hours = hours > 12 ? hours - 12 : hours;
-    let minutes = currentTime.getMinutes();
-    let seconds = currentTime.getSeconds();
 
     /**
      *  if current hour is less than 12, then it's AM
      *  else it's PM
      */
-    let ampm = currentTime.getHours() < 12 ? 'AM' : 'PM';
+    let ampm = hours < 12 ? 'AM' : 'PM';
+
+    // if hours > 12, subtract 12 from it to get the value in AM/PM format
+    hours = hours > 12 ? hours - 12 : hours;
+    let minutes = currentTime.getMinutes();
+    let seconds = currentTime.getSeconds();
 
     // padding the single digits with 0 and assigning them to their respective span tags
     $('hours').textContent = padSingleDigit(hours);
